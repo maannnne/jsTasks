@@ -72,3 +72,19 @@
             }
         }
     }
+
+
+
+//5.Write a JavaScript function to merge two arrays and remove all duplicates elements.
+    const merge_and_rem_dup = (arr1, arr2) => {
+        let merged = arr1.concat(arr2);
+        const result = merged.filter((elem, index) =>{
+            return merged.indexOf(elem) == index;
+        });
+        return result;   
+    }
+
+    let arr1 = [1, 2, 3];
+    let arr2 = [2, 3 ,4, 5, 6];  
+    console.log(merge_and_rem_dup(arr1, arr2));
+
