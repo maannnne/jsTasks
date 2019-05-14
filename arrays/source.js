@@ -29,8 +29,10 @@
 
 //2.Write a JavaScript program to remove duplicate items from an array.
     const dupRemover = (arr) => {
-        let unique = [... new Set(arr)]; //spread operator, Set and new
-        return unique;
+       let noDupicMupic = arr.filter((elem, index) => {
+           return arr.indexOf(elem) === index;
+       });
+       return noDupicMupic;
     }
     let a = [1, 2, 5, 7, 1, 5, 4, 89, 5];
     console.log(dupRemover(a));
@@ -88,3 +90,20 @@
     let arr2 = [2, 3 ,4, 5, 6];  
     console.log(merge_and_rem_dup(arr1, arr2));
 
+//6.Write a JavaScript function to remove a specific element from an array.
+    const remSpecElem = (arr, elemInd) => {
+        arr.splice(elemInd, 1);
+        return arr;
+    }
+    console.log(remSpecElem(arr1, 2));
+
+//7.Write a JavaScript function to find if an array contains a specific element.
+console.clear();
+    const retSpecElem = (arr, elem) => {
+        return true ? arr.includes(elem) : false;
+    }
+    console.log(retSpecElem(arr2, 4));
+
+//8.Write a JavaScript script to empty an array keeping the original.
+//9.Write a JavaScript function to get nth largest element from an unsorted array.
+//10.Write a JavaScript function to get a random item from an array.
